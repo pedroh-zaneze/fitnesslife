@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{% block subtitulo %}Suporte{% endblock %}
+{% block conteudo %}
+<div class="container my-5">
+    <h1 class="text-center"><i class="bi bi-chat-dots"></i> Suporte</h1>
+    
+    <div class="mt-5">
+        <h2 class="text-center">Dúvidas Frequentes</h2>
+        <div class="accordion mt-4" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faq1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq1" aria-expanded="true" aria-controls="collapseFaq1">
+                        Como eu altero as informações do meu perfil?
+                    </button>
+                </h2>
+                <div id="collapseFaq1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Para alterar as informações do seu perfil, vá para a seção de configurações do seu perfil, clique em "Editar Perfil", faça as alterações desejadas e salve as alterações.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion mt-4" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq2">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq2" aria-expanded="true" aria-controls="collapseFaq2">
+                            Como eu assino o Plano Plus?
+                        </button>
+                    </h2>
+                    <div id="collapseFaq2" class="accordion-collapse collapse show" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Para assinar o nosso Plano Plus, basta acessar a aba planos e adquirir o nosso Plano Plus e usufruir de todas as funcionalidades de nosso site.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion mt-4" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq3">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq3" aria-expanded="true" aria-controls="collapseFaq3">
+                                Como eu renovo minha assinatura?
+                            </button>
+                        </h2>
+                        <div id="collapseFaq3" class="accordion-collapse collapse show" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                A nossa assinatura renova automaticante todo mês. 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion mt-4" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faq4">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq4" aria-expanded="true" aria-controls="collapseFaq4">
+                                    Como eu cancelo a minha assinatura?
+                                </button>
+                            </h2>
+                            <div id="collapseFaq4" class="accordion-collapse collapse show" aria-labelledby="faq4" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Para cancelar a sua assinatura, basta ir na aba planos e entrar no Plano Plus e procurar "Cancelar Assinatura".
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion mt-4" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faq5">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq5" aria-expanded="true" aria-controls="collapseFaq5">
+                                        Como eu encontro os exercícios que quero?
+                                    </button>
+                                </h2>
+                                <div id="collapseFaq5" class="accordion-collapse collapse show" aria-labelledby="faq5" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Para você achar o exercício em específico que você quer, basta acessar a aba de pesquisa e procurar pelo nome do exercício na página "Exercícios". 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion mt-4" id="faqAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="faq6">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq6" aria-expanded="true" aria-controls="collapseFaq6">
+                                            Como eu encontro as receitas e dietas que quero?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFaq6" class="accordion-collapse collapse show" aria-labelledby="faq6" data-bs-parent="#faqAccordion">
+                                        <div class="accordion-body">
+                                            Para você achar a receita em específico que você quer, basta acessar a aba de pesquisa e procurar pelo nome da receita desejada na página "Receitas".
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion mt-4" id="faqAccordion">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="faq7">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq7" aria-expanded="true" aria-controls="collapseFaq7">
+                                                Como faço para alterar ou recuperar minha senha?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFaq7" class="accordion-collapse collapse show" aria-labelledby="faq7" data-bs-parent="#faqAccordion">
+                                            <div class="accordion-body">
+                                                Caso você queira alterar sua senha, basta acessar as configurações do seu perfil e procurar por "segurança", depois ir em senha e procurar pela opção alterar senha.
+                                            </div>
+                                        </div>
+                                    </div>
+            <!-- Adicione mais perguntas frequentes conforme necessário -->
+        </div>
+    </div>
+    
+    <div class="mt-5">
+        <h2 class="text-center">Sua dúvida ainda não foi respondida?</h2>
+        <p class="text-center">Entre em contato conosco. Descreva seu problema detalhadamente. 
+        Nossa equipe entrará em contato o mais breve possível (máximo de 3 dias de espera).</p>
+        
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form>
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Assunto</label>
+                        <input type="text" class="form-control" id="subject" placeholder="Digite o assunto">
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Descrição do Problema</label>
+                        <textarea class="form-control" id="description" rows="4" placeholder="Descreva seu problema"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email para Contato</label>
+                        <input type="email" class="form-control" id="email" placeholder="Digite seu email">
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary"><i class="bi bi-send"></i>Enviar</button>
+                        <button type="reset" class="btn btn-secondary"><i class="bi bi-x-circle"></i>Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

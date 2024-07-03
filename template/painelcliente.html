@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block subtitulo %}Painel{% endblock %}
+{% block conteudo %}
+<div class="container my-5">
+    <h1 class="text-center mb-4">Olá usuário</h1>
+    
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="info-tab" data-bs-toggle="tab" data-bs-target="#info" type="button" role="tab" aria-controls="info" aria-selected="true">Painel de Informações</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="results-tab" data-bs-toggle="tab" data-bs-target="#results" type="button" role="tab" aria-controls="results" aria-selected="false">Resultados</button>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content" id="myTabContent">
+        <!-- Painel de Informações -->
+        <div class="tab-pane fade show active" id="info" role="tabpanel" aria-labelledby="info-tab">
+            <form class="my-4">
+                <div class="mb-3">
+                    <label for="altura" class="form-label">Altura (cm)</label>
+                    <input type="number" class="form-control" id="altura" placeholder="Digite sua altura">
+                </div>
+                <div class="mb-3">
+                    <label for="peso" class="form-label">Peso (Kg)</label>
+                    <input type="number" class="form-control" id="peso" placeholder="Digite seu peso">
+                </div>
+                <div class="mb-3">
+                    <label for="genero" class="form-label">Gênero</label>
+                    <select class="form-select" id="genero">
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="idade" class="form-label">Idade</label>
+                    <input type="number" class="form-control" id="idade" placeholder="Digite sua idade">
+                </div>
+                <div class="mb-3">
+                    <label for="atividade" class="form-label">Nível de Atividade</label>
+                    <select class="form-select" id="atividade">
+                        <option value="baixo">Baixo</option>
+                        <option value="moderado">Moderado</option>
+                        <option value="alto">Alto</option>
+                        <option value="muito alto">Muito Alto</option>
+                        <option value="elevado">Elevado</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="objetivo" class="form-label">Objetivo</label>
+                    <select class="form-select" id="objetivo">
+                        <option value="perder_peso">Perder Peso</option>
+                        <option value="perder_peso_lentamente">Perder Peso Lentamente</option>
+                        <option value="manter_peso">Manter Peso</option>
+                        <option value="aumentar_peso_lentamente">Aumentar Peso Lentamente</option>
+                        <option value="aumentar_peso">Aumentar Peso</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Salvar Informações</button>
+            </form>
+        </div>
+
+        <!-- Resultados -->
+        <div class="tab-pane fade" id="results" role="tabpanel" aria-labelledby="results-tab">
+            <div class="my-4">
+                <h3>Resultados</h3>
+                <p><strong>IMC:</strong> <span id="imc-resultado">-</span></p>
+                <p><strong>Taxa Metabólica Basal:</strong> <span id="tmb-resultado">-</span></p>
+                <p><strong>Quantidade Ideal de Água por Dia:</strong> <span id="agua-resultado">-</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

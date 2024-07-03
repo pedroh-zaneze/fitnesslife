@@ -1,0 +1,8 @@
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMg8nVLexdxW7vR6uDRvyLMRMs1mtae8Y3APPA3HGRrG pedrohenriquephzc123@gmail.com
+
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/pedroh-zaneze/fitnesslife.git
+git push -u origin main

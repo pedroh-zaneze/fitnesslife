@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block subtitulo %}Minha Página{% endblock %}
+{% block conteudo %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-12 text-center my-auto">
+            <h1>Olá, {{ nome_usuario }}!</h1>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="btn-group-vertical w-100" role="group" aria-label="Basic example">
+                <a href="/receitas" class="btn btn-outline-secondary mb-2">Receitas</a>
+                <a href="/exercicios" class="btn btn-outline-secondary mb-2">Exercícios</a>
+                <a href="/artigos" class="btn btn-outline-secondary mb-2">Artigos</a>
+                <a href="/estatisticas" class="btn btn-outline-secondary mb-2">Estatísticas</a>
+                <a href="/professores" class="btn btn-outline-secondary mb-2">Professores</a>
+                <a href="/calendario" class="btn btn-outline-secondary mb-2">Calendário</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-12 text-center">
+            <i class="bi bi-cup-straw fs-1"></i>
+            <p class="fs-4">Consumo de água: <span id="agua-consumo">0</span> ml</p>
+            <div class="btn-group" role="group" aria-label="Water intake options">
+                <button type="button" class="btn btn-primary" onclick="adicionarAgua(250)">+250ml</button>
+                <button type="button" class="btn btn-primary" onclick="adicionarAgua(500)">+500ml</button>
+                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#customWaterModal">Adição Personalizada</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para Adição Personalizada -->
+<div class="modal fade" id="customWaterModal" tabindex="-1" aria-labelledby="customWaterModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="customWaterModalLabel">Adição Personalizada de Água</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="customWaterInput" class="form-label">Quantidade (ml)</label>
+                    <input type="number" class="form-control" id="customWaterInput" placeholder="Digite a quantidade em ml">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" onclick="adicionarAguaPersonalizada()">Adicionar</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

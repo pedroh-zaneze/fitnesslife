@@ -1,0 +1,125 @@
+.navbar-custom {
+    background-color: #5A6978 !important;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link,
+.navbar-custom .navbar-toggler-icon {
+    color: white !important;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link:focus {
+    color: #D1D1D1 !important;
+}
+
+.navbar-custom .btn-outline-success {
+    color: white !important;
+    border-color: white !important;
+}
+
+.navbar-custom .btn-outline-success:hover {
+    color: #5A6978 !important;
+    background-color: white !important;
+}
+
+.footer-custom {
+    background-color: #5A6978;
+    color: white;
+    padding: 10px 0;
+}
+
+.footer-custom .text-center {
+    margin: 0;
+}
+
+.navbar-brand img {
+    height: 40px; /* Ajuste a altura conforme necessário */
+    margin-right: 10px; /* Espaçamento entre a logo e o texto */
+}
+
+.card {
+    border: 1px solid #5A6978;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #5A6978;
+    color: white;
+    padding: 1rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card-body ul {
+    padding-left: 0;
+}
+
+.card-body ul li {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.card-body ul li i {
+    margin-right: 0.5rem;
+}
+
+.plan-card .card-header h2 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.plan-card .card-header p {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.btn-lg {
+    padding: 0.5rem 2rem;
+    font-size: 1.25rem;
+}
+
+.progress-bar.bg-info {
+    background-color: blue !important;
+}
+
+.progress-bar.bg-success {
+    background-color: green !important;
+}
+
+.progress-bar.bg-danger {
+    background-color: red !important;
+}
+
+/* Adicione estilos personalizados aqui */
+
+/* Balão de data */
+.balao {
+    display: inline-block;
+    position: relative;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin: 0 10px;
+}
+
+.balao i {
+    margin-right: 5px;
+}
+
+/* Ícone de seta */
+.bi-caret-left,
+.bi-caret-right {
+    font-size: 2rem;
+    color: black;
+}
+
+/* Progresso */
+.progress-bar {
+    border-radius: 0;
+}

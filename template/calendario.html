@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block subtitulo %}Calendário{% endblock %}
+{% block conteudo %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1>Calendário</h1>
+            <p>Veja e registre seus treinos e refeições diários.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        {% for day in ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"] %}
+                        <th>{{ day }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for week in month_days %}
+                    <tr>
+                        {% for day in week %}
+                        <td>
+                            {% if day != 0 %}
+                            <a class="btn btn-outline-primary w-100" href="/dia/{{ year }}-{{ '{:02d}'.format(month) }}-{{ '{:02d}'.format(day) }}">{{ day }}</a>
+                            {% endif %}
+                        </td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

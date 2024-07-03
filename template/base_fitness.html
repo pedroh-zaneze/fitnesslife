@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/img/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/static/lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/lib/bootstrap-icons/font/bootstrap-icons.min.css">
+    <title>Base FitnessLife</title>
+    <style>
+        .navbar.bg-custom {
+            background-color: #5A6978 !important;
+        }
+
+        footer.bg-custom {
+            background-color: #5A6978 !important;
+        }
+
+        ç´´~]~]~][
+        
+    ]
+        .bg-beige {
+            background-color: #F0F0F0 !important;
+        }
+
+        .bg-green {
+            background-color: #BFDCCC !important;
+        }
+
+        input.border-beige {
+            border-color: #F0F0F0 !important;
+        }
+
+        .btn-beige {
+            --bs-btn-bg: #F0F0F0 !important;
+            --bs-btn-border-color: #F0F0F0 !important;
+            --bs-btn-hover-color: #000;
+            --bs-btn-hover-bg: #ebebe6 !important;
+            --bs-btn-hover-border-color: #ebebe6 !important;
+        }
+
+        aside.coluna-esquerda {
+            background-color: #F0F0F0;
+            width: 250px;
+        }
+
+        img.rounded-full {
+            border-radius: 50% !important;
+        }
+
+        .text-dark-beige {
+            color: #909090 !important;
+            padding: .1rem .5rem;
+            margin: .1rem 0;
+        }
+
+        .nav-pills .nav-link.active,
+        .nav-pills .show>.nav-link {
+
+            background-color: rgba(255, 255, 255, 1);
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100 bg-green">
+    <nav class="navbar text-black bg-custom py-3 px-1">
+        <div class="container-fluid d-block">
+            <div class="row">
+                <div class="col-12">
+                    <div class="text-start">
+                        <a href="/" class="d-flex">
+                            <img src="/static/img/logo_fitness.svg" alt="logotipo" height="60px">
+                            <img src="/static/img/nome_fitness.svg" alt="logotipo" width="300px">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 mt-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <nav class="nav justify-content-start">
+                            <a class="nav-link text-white py-0 ps-0" href="/">Minha Página</a>
+                            <a class="nav-link text-white py-0" href="/">Dietas</a>
+                            <a class="nav-link text-white py-0" href="/">Professores</a>
+                            <a class="nav-link text-white py-0" href="/">Planos</a>
+                            <a class="nav-link text-white py-0" href="/">Contato</a>
+                            <a class="nav-link text-white py-0" href="/">Sobre</a>
+                        </nav>
+                        <form action="/cadastrarnews" method="post">
+                            <div class="text-end">
+                                <div class="input-group input-group-sm">
+                                    <input type="email" class="form-control bg-beige border-beige rounded-start-5"
+                                        style="width: 200px" placeholder="Digite o termo da busca aqui" id="busca" />
+                                    <button class="btn btn-beige rounded-end-5" type="submit">
+                                        <i class="bi bi-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="d-flex flex-column flex-grow-1">
+        <div class="d-flex flex-grow-1">
+            <aside class="coluna-esquerda p-3 d-flex flex-column justify-content-between">
+                <div>
+                    <div class="px-5 mb-2 border-bottom border-bottom-1 border-secondary-subtle">
+                        <img src="/static/img/perfil.jpg" alt="Foto de Perfil" class="img-thumbnail rounded-full">
+                        <p class="lead text-center">Fulana de Tal</p>
+                    </div>
+                    <nav class="nav nav-pills flex-column mt-2">
+                        <a class="nav-link text-dark-beige" href="#">Painel</a>
+                        <a class="nav-link text-dark-beige" href="#">Meu Perfil</a>
+                        <a class="nav-link text-dark-beige" href="#">Registro de Exercícios</a>
+                        <a class="nav-link text-dark-beige" href="#">Registro de Alimentação</a>
+                        <a class="nav-link text-dark-beige active" href="#">Mensagens</a>
+                        <a class="nav-link text-dark-beige" href="#">Configurações</a>
+                        <a class="nav-link text-dark-beige" href="#">Sair</a>
+                    </nav>
+                </div>
+                <nav class="nav nav-pills flex-column mt-3">
+                    <a class="nav-link text-dark-beige" href="#">Política de Privacidade</a>
+                    <a class="nav-link text-dark-beige" href="#">Termos de Uso</a>
+                    <a class="nav-link text-dark-beige" href="#">Suporte</a>
+                </nav>
+            </aside>
+            <section class="flex-grow-1 p-3">
+                Conteúdo Aqui
+            </section>
+        </div>
+    </main>
+
+    <footer class="p-1 bg-custom text-white mt-auto border-top border-1 border-secondary-subtle">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 offset-3">
+                    <p class="text-center mb-0">&copy 2024 Fitness Life. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-3">
+                    <div class="d-flex gap-3 justify-content-end">
+                        <a href="/" class="text-decoration-none text-white">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="/" class="text-decoration-none text-white">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="/" class="text-decoration-none text-white">
+                            <i class="bi bi-telegram"></i>
+                        </a>
+                        <a href="/" class="text-decoration-none text-white">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+                        <a href="/" class="text-decoration-none text-white">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>

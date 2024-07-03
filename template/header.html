@@ -1,0 +1,80 @@
+<header>
+    <nav
+        class="navbar navbar-expand-lg navbar-light bg-light navbar-custom"
+    >
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <img src="/static/img/logofit.png" alt="Fitness Life Logo" style="height: 40px; margin-right: 10px;">
+                Fitness Life
+            </a>
+            <button
+                class="navbar-toggler d-lg-none"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/" aria-current="page"
+                            >Principal
+                            <span class="visually-hidden">(current)</span></a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/painelcliente">Painel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/alimentacao">Alimentação</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/exercicios">Exercícios</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="contate-nos.html"
+                            id="dropdownId"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            >Contate-nos</a
+                        >
+                        <div
+                            class="dropdown-menu"
+                            aria-labelledby="dropdownId"
+                        >
+                            <a class="dropdown-item" href="/suporte"
+                                >Suporte</a
+                            >
+                            <a class="dropdown-item" href="/contato"
+                                >Contato</a
+                            >
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/planos">Planos</a>
+                    </li>
+                </ul>
+                <form class="d-flex my-2 my-lg-0">
+                    <input
+                        class="form-control me-sm-2"
+                        type="text"
+                        placeholder="Pesquisar"
+                    />
+                    <button
+                        class="btn btn-outline-success my-2 my-sm-0"
+                        type="submit"
+                    >
+                        Buscar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
