@@ -1,5 +1,33 @@
 {% extends "base.html" %}
-{% block subtitulo %}Principal{% endblock %}
+{% block subtitulo %}Dieta{% endblock %}
 {% block conteudo %}
-
+<div class="container my-5">
+    <h1 class="text-center mb-4">Receitas</h1>
+    
+    <div class="row text-center mb-4">
+        <div class="col-md-6 mb-3">
+            <a href="/receitas_salvas" class="btn btn-primary w-100">
+                <i class="bi bi-bookmark"></i> Receitas Salvas
+            </a>
+        </div>
+        <div class="col-md-6 mb-3">
+            <a href="/receitas" class="btn btn-primary w-100">
+                <i class="bi bi-file-earmark-text"></i> Receitas
+            </a>
+        </div>
+    </div>
+    
+    <div class="row text-center mb-4">
+        <div class="col-md-6 mb-3">
+            <a href="/dietas_cadastradas" class="btn btn-primary w-100">
+                <i class="bi bi-calendar-check"></i> Dietas Cadastradas
+            </a>
+        </div>
+        <div class="col-md-6 mb-3">
+            <a href="/dietas" class="btn btn-primary w-100">
+                <i class="bi bi-calendar"></i> Dietas
+            </a>
+        </div>
+    </div>
+</div>
 {% endblock %}
