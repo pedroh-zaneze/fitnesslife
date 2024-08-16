@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% block subtitulo %}Professores{% endblock %}
+{% block conteudo %}
+<div class="container my-5">
+    <h1 class="text-center mb-4">Professores</h1>
+    
+    <!-- Campo de busca -->
+    <div class="input-group mb-4">
+        <input type="text" class="form-control" placeholder="Buscar Professor" aria-label="Buscar Professor">
+        <button class="btn btn-outline-secondary" type="button" style="border: none;">
+            <i class="bi bi-search"></i>
+        </button>
+    </div>
+
+    <!-- Professores -->
+    <div class="row mb-5">
+        <!-- Exemplo de professor -->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card text-center">
+                <img src="/static/img/jorlan.png" class="card-img-top" alt="Professor Jorlan" style="height: 300px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Jorlan</h5>
+                    <div class="d-flex justify-content-center">
+                        <!-- Estrelas de avaliação -->
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-half text-warning"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Repita o bloco acima para outros professores -->
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card text-center">
+                <img src="/static/img/bruno.png" class="card-img-top" alt="Professor Bruno" style="height: 300px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Bruno</h5>
+                    <div class="d-flex justify-content-center">
+                        <!-- Estrelas de avaliação -->
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-half text-warning"></i>
+                        <i class="bi bi-star text-warning"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card text-center">
+                <img src="/static/img/icaro.png" class="card-img-top" alt="Professor ÍCaro" style="height: 300px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Ícaro</h5>
+                    <div class="d-flex justify-content-center">
+                        <!-- Estrelas de avaliação -->
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star text-warning"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card text-center">
+                <img src="/static/img/igorfina.png" class="card-img-top" alt="Professor Igorfina" style="height: 300px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Igorfina</h5>
+                    <div class="d-flex justify-content-center">
+                        <!-- Estrelas de avaliação -->
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Recomendações de Professores -->
+    <h2 class="text-center mb-4">Recomendações de Professores</h2>
+    <div class="row justify-content-center">
+        <!-- Exemplo de recomendação -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card text-center">
+                <img src="/static/img/bambam.png" class="card-img-top" alt="Professor Bambam" style="height: 300px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Bambam</h5>
+                    <div class="d-flex justify-content-center mb-2">
+                        <!-- Estrelas de avaliação -->
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                    </div>
+                    <p class="card-text">Que não vai dar o que, comi pra caramba, BIIIIII.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card text-center">
+                <img src="/static/img/leostronda.png" class="card-img-top" alt="Professor Léo Stronda" style="height: 300px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Léo Stronda</h5>
+                    <div class="d-flex justify-content-center mb-2">
+                        <!-- Estrelas de avaliação -->
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                    </div>
+                    <p class="card-text">Tá saindo da jaula o monstro.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card text-center">
+                <img src="/static/img/cbum.png" class="card-img-top" alt="Professor Cbum" style="height: 300px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">Cbum</h5>
+                    <div class="d-flex justify-content-center mb-2">
+                        <!-- Estrelas de avaliação -->
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                    </div>
+                    <p class="card-text">O melhor profissional de todos! Atencioso, inteligente e simpático.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Repita o bloco acima para outras recomendações -->
+    </div>
+</div>
+{% endblock %}

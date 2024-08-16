@@ -7,11 +7,89 @@
     <link rel="stylesheet" href="/static/lib/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/static/css/estilo.css">
     <title>Fitness Life :: {% block subtitulo %}{% endblock %}</title>
+    <style>
+        .navbar.bg-custom {
+            background-color: #5A6978 !important;
+        }
+
+        footer.bg-custom {
+            background-color: #5A6978 !important;
+        }
+
+        .bg-beige {
+            background-color: #F0F0F0 !important;
+        }
+
+        .bg-green {
+            background-color: #BFDCCC !important;
+        }
+
+        input.border-beige {
+            border-color: #F0F0F0 !important;
+        }
+
+        .btn-beige {
+            --bs-btn-bg: #F0F0F0 !important;
+            --bs-btn-border-color: #F0F0F0 !important;
+            --bs-btn-hover-color: #000;
+            --bs-btn-hover-bg: #ebebe6 !important;
+            --bs-btn-hover-border-color: #ebebe6 !important;
+        }
+
+        aside.coluna-esquerda {
+            background-color: #F0F0F0;
+            width: 250px;
+        }
+
+        img.rounded-full {
+            border-radius: 50% !important;
+        }
+
+        .text-dark-beige {
+            color: #909090 !important;
+            padding: .1rem .5rem;
+            margin: .1rem 0;
+        }
+
+        .nav-pills .nav-link.active,
+        .nav-pills .show>.nav-link {
+
+            background-color: rgba(255, 255, 255, 1);
+        }
+    </style>
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100 bg-green">
     {% include "header.html" %}
-    <main class="container-fluid flex-grow-1 p-0">
-        {% block conteudo %}{% endblock %}
+    <main class="d-flex flex-column flex-grow-1">
+        <div class="d-flex flex-grow-1">
+            <aside class="coluna-esquerda p-3 d-flex flex-column justify-content-between">
+                <div>
+                    <div class="px-5 mb-2 border-bottom border-bottom-1 border-secondary-subtle">
+                        <img src="/static/img/fotoperfil.png" alt="Foto de Perfil" class="img-thumbnail rounded-full">
+                        <p class="lead text-center">Dino</p>
+                    </div>
+                    <nav class="nav nav-pills flex-column mt-2">
+                        <a class="nav-link text-dark-beige" href="/painelcliente">Painel</a>
+                        <a class="nav-link text-dark-beige" href="/perfil">Meu Perfil</a>
+                        <a class="nav-link text-dark-beige" href="/exercicios">Registro de Exercícios</a>
+                        <a class="nav-link text-dark-beige" href="/alimentacao">Registro de Alimentação</a>
+                        <a class="nav-link text-dark-beige" href="/mensagens">Mensagens</a>
+                        <a class="nav-link text-dark-beige" href="/artigos">Artigos</a>
+                        <a class="nav-link text-dark-beige" href="/configuracoes">Configurações</a>
+                        <a class="nav-link text-dark-beige" href="/sair">Sair</a>
+                    </nav>
+                </div>
+                <nav class="nav nav-pills flex-column mt-3">
+                    <a class="nav-link text-dark-beige" href="/politicadeprivacidade">Política de Privacidade</a>
+                    <a class="nav-link text-dark-beige" href="/termos">Termos de Uso</a>
+                    <a class="nav-link text-dark-beige" href="/suporte">Suporte</a>
+                </nav>
+            </aside>
+            <section class="flex-grow-1 p-3">
+                {% block conteudo %}
+                {% endblock %}
+            </section>
+        </div>
     </main>
     {% include "footer.html" %}
     <script src="/static/lib/bootstrap/js/bootstrap.bundle.js"></script>

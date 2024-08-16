@@ -1,79 +1,38 @@
 <header>
-    <nav
-        class="navbar navbar-expand-lg navbar-light bg-light navbar-custom"
-    >
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="/">
-                <img src="/static/img/logofit.png" alt="Fitness Life Logo" style="height: 40px; margin-right: 10px;">
-                Fitness Life
-            </a>
-            <button
-                class="navbar-toggler d-lg-none"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#menuPrincipal"
-                aria-controls="menuPrincipal"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="menuPrincipal">
-                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/" aria-current="page"
-                            >Principal
-                            <span class="visually-hidden">(current)</span></a
-                        >
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/painelcliente">Painel</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/alimentacao">Alimentação</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/exercicios">Exercícios</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a
-                            class="nav-link dropdown-toggle"
-                            href="contate-nos.html"
-                            id="dropdownId"
-                            data-bs-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            >Contate-nos</a
-                        >
-                        <div
-                            class="dropdown-menu"
-                            aria-labelledby="dropdownId"
-                        >
-                            <a class="dropdown-item" href="/suporte"
-                                >Suporte</a
-                            >
-                            <a class="dropdown-item" href="/contato"
-                                >Contato</a
-                            >
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/planos">Planos</a>
-                    </li>
-                </ul>
-                <form class="d-flex my-2 my-lg-0">
-                    <input
-                        class="form-control me-sm-2"
-                        type="text"
-                        placeholder="Pesquisar"
-                    />
-                    <button
-                        class="btn btn-outline-success my-2 my-sm-0"
-                        type="submit"
-                    >
-                        Buscar
-                    </button>
-                </form>
+    <nav class="navbar text-black bg-custom py-3 px-1">
+        <div class="container-fluid d-block">
+            <div class="row">
+                <div class="col-12">
+                    <div class="text-start">
+                        <a href="/" class="d-flex">
+                            <img src="/static/img/logosvg.svg" alt="logotipo" height="60px">
+                            <img src="/static/img/nome_fitness.svg" alt="logotipo" width="300px">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 mt-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <nav class="nav justify-content-start">
+                            <a class="nav-link text-white py-0 ps-0" href="/minhapagina">Minha Página</a>
+                            <a class="nav-link text-white py-0" href="/dieta">Dietas</a>
+                            <a class="nav-link text-white py-0" href="/professores">Professores</a>
+                            <a class="nav-link text-white py-0" href="/planos">Planos</a>
+                            <a class="nav-link text-white py-0" href="/contato">Contato</a>
+                            <a class="nav-link text-white py-0" href="/sobre">Sobre</a>
+                        </nav>
+                        <form action="/cadastrarnews" method="post">
+                            <div class="text-end">
+                                <div class="input-group input-group-sm">
+                                    <input type="email" class="form-control bg-beige border-beige rounded-start-5"
+                                        style="width: 200px" placeholder="Digite o termo da busca aqui" id="busca" />
+                                    <button class="btn btn-beige rounded-end-5" type="submit">
+                                        <i class="bi bi-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
