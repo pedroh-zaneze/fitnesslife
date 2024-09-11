@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block subtitulo %}Principal{% endblock %}
+{% block subtitulo %}Esqueceu sua senha{% endblock %}
 {% block conteudo %}
 <style>
     .bg-cover {
@@ -28,21 +28,31 @@
     .content {
         max-width: 600px;
         padding: 20px;
+        background-color: rgba(255, 255, 255, 0.85);
+        border-radius: 10px;
     }
 
     .text-white {
         color: #ffffff;
     }
+
+    .btn-primary {
+        background-color: #00406F;
+        border-color: #00406F;
+    }
 </style>
 <div class="bg-cover position-relative">
     <div class="overlay d-flex justify-content-center align-items-center text-center">
         <div class="content text-center">
-            <h1 class="display-4 text-white">Seja bem-vindo ao Fitness Life!</h1>
-            <p class="lead text-white">Transforme sua vida com saúde e bem-estar com o Fitness Life, o seu novo parceiro para uma vida mais saudável e ativa.</p>
-            <a href="/login" class="btn btn-primary btn-lg">Entrar</a>
-            <a href="/inscrever" class="btn btn-primary btn-lg">Cadastrar-se</a>
+            <h2 class="text-dark">Problemas para fazer login?</h2>
+            <p class="lead text-dark">Digite seu e-mail e enviaremos um link para você voltar à sua conta.</p>
+            <form method="POST" action="/recuperar_senha">
+                <div class="form-group mb-3">
+                    <input type="email" class="form-control" name="email" placeholder="Email" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Próximo</button>
+            </form>            
         </div>
     </div>
 </div>
 {% endblock %}
-

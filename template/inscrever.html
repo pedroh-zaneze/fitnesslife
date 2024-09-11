@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block subtitulo %}Inscreva-se{% endblock %}
+{% block conteudo %}
+<style>
+    .bg-cover {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-image: url('/static/img/inicial.png');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        backdrop-filter: blur(5px);
+    }
+
+    .content {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        max-width: 400px;
+        width: 100%;
+    }
+
+    .form-control {
+        margin-bottom: 15px;
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+
+    .form-check-label {
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+
+    .text-center a {
+        color: #007bff;
+    }
+</style>
+
+<div class="bg-cover">
+    <div class="overlay">
+        <div class="content">
+            <h1 class="text-center">Inscreva-se</h1>
+            <p class="text-center">Preencha todos os campos abaixo para inscrever-se no Fitness Life</p>
+            <form action="/inscrever" method="POST">
+                <input type="text" class="form-control" name="nome" placeholder="Nome" required>
+                <input type="email" class="form-control" name="email" placeholder="Email" required>
+                <input type="password" class="form-control" name="senha" placeholder="Senha" required>
+
+                <p>Marque uma das opções abaixo:</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="profissao" value="cliente" id="cliente">
+                    <label class="form-check-label" for="cliente">
+                        Sou Cliente
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="profissao" value="educador_fisico" id="educador_fisico">
+                    <label class="form-check-label" for="educador_fisico">
+                        Sou Educador Físico
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="profissao" value="nutricionista" id="nutricionista">
+                    <label class="form-check-label" for="nutricionista">
+                        Sou Nutricionista
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Inscrever-se</button>
+            </form>
+            <div class="text-center mt-3">
+                <small>Ao clicar em inscrever-se você concorda com nossos termos e condições.</small>
+                <p>Já tem conta? <a href="/login">Clique aqui</a>.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

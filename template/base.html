@@ -59,13 +59,16 @@
     </style>
 </head>
 <body class="d-flex flex-column min-vh-100 bg-green">
+    {% if show_header %}
     {% include "header.html" %}
+    {% endif %}
     <main class="d-flex flex-column flex-grow-1">
         <div class="d-flex flex-grow-1">
+            {% if show_sidebar %}
             <aside class="coluna-esquerda p-3 d-flex flex-column justify-content-between">
                 <div>
                     <div class="px-5 mb-2 border-bottom border-bottom-1 border-secondary-subtle">
-                        <img src="/static/img/fotoperfil.png" alt="Foto de Perfil" class="img-thumbnail rounded-full">
+                        <img src="/static/img/fotoperfil.png" alt="Foto de Perfil" class="img-thumbnail rounded-circle">
                         <p class="lead text-center">Dino</p>
                     </div>
                     <nav class="nav nav-pills flex-column mt-2">
@@ -85,13 +88,16 @@
                     <a class="nav-link text-dark-beige" href="/suporte">Suporte</a>
                 </nav>
             </aside>
+            {% endif %}
             <section class="flex-grow-1 p-3">
                 {% block conteudo %}
                 {% endblock %}
             </section>
         </div>
     </main>
+    {% if show_footer %}
     {% include "footer.html" %}
+      {% endif %}
     <script src="/static/lib/bootstrap/js/bootstrap.bundle.js"></script>
 </body>
 </html>

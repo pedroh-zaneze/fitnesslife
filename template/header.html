@@ -1,39 +1,59 @@
 <header>
     <nav class="navbar text-black bg-custom py-3 px-1">
-        <div class="container-fluid d-block">
-            <div class="row">
-                <div class="col-12">
-                    <div class="text-start">
-                        <a href="/" class="d-flex">
-                            <img src="/static/img/logosvg.svg" alt="logotipo" height="60px">
-                            <img src="/static/img/nome_fitness.svg" alt="logotipo" width="300px">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-12 mt-3">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <nav class="nav justify-content-start">
-                            <a class="nav-link text-white py-0 ps-0" href="/minhapagina">Minha Página</a>
-                            <a class="nav-link text-white py-0" href="/dieta">Dietas</a>
-                            <a class="nav-link text-white py-0" href="/professores">Professores</a>
-                            <a class="nav-link text-white py-0" href="/planos">Planos</a>
-                            <a class="nav-link text-white py-0" href="/contato">Contato</a>
-                            <a class="nav-link text-white py-0" href="/sobre">Sobre</a>
-                        </nav>
-                        <form action="/cadastrarnews" method="post">
-                            <div class="text-end">
+        <div class="container-fluid d-flex flex-column align-items-center">
+            <div class="d-flex align-items-center">
+                    <a href="/" class="d-flex">
+                        <img src="/static/img/logosvg.svg" alt="logotipo" height="60px">
+                        <img src="/static/img/nome_fitness.svg" alt="logotipo" width="300px">
+                    </a>
+            </div>
+        </div>
+        <div class="col-12 mt-3">
+            <div class="row justify-content-center justify-content-lg-between align-items-center">
+                <!-- Navbar Responsiva -->
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid px-5"> <!-- Adicionado px-5 para espaçar da borda -->
+                        <!-- Botão Hamburger (Exibido apenas em telas pequenas) -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+        
+                        <!-- Links da Navbar (Colapsáveis) -->
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link text-white py-0 ps-0" href="/minhapagina">Minha Página</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white py-0" href="/receitas">Receitas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white py-0" href="/professores">Professores</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white py-0" href="/planos">Planos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white py-0" href="/contato">Contato</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white py-0" href="/sobre">Sobre</a>
+                                </li>
+                            </ul>
+        
+                            <!-- Formulário de Busca (Responsivo) -->
+                            <form action="/cadastrarnews" method="post" class="d-flex">
                                 <div class="input-group input-group-sm">
-                                    <input type="email" class="form-control bg-beige border-beige rounded-start-5"
-                                        style="width: 200px" placeholder="Digite o termo da busca aqui" id="busca" />
+                                    <input type="email" class="form-control bg-beige border-beige rounded-start-5" style="width: 200px" placeholder="Digite o termo da busca aqui" id="busca" />
                                     <button class="btn btn-beige rounded-end-5" type="submit">
                                         <i class="bi bi-search"></i>
                                     </button>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
-                </div>
+                </nav>
             </div>
-        </div>
+        </div>        
     </nav>
 </header>
