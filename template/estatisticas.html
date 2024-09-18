@@ -1,5 +1,184 @@
 {% extends "base.html" %}
-{% block subtitulo %}Estatísticas{% endblock %}
+{% block subtitulo %}Calendário{% endblock %}
 {% block conteudo %}
+    <div class="container mt-5">
+        <h2 class="text-center">Última semana de treinos</h2>
+        <div class="row justify-content-center mt-4">
+            <div class="col-12 col-md-8">
+                <div class="d-flex justify-content-between" style="font-size: 1.5rem;">
+                    <div class="bg-light p-3 border text-center" style="width: 80px; height: 80px; line-height: 1.2;">
+                        <strong>D</strong><br>28
+                    </div>
+                    <div class="bg-light p-3 border text-center" style="width: 80px; height: 80px; line-height: 1.2;">
+                        <strong>S</strong><br>29
+                    </div>
+                    <div class="bg-light p-3 border text-center" style="width: 80px; height: 80px; line-height: 1.2;">
+                        <strong>T</strong><br>30
+                    </div>
+                    <div class="bg-light p-3 border text-center" style="width: 80px; height: 80px; line-height: 1.2;">
+                        <strong>Q</strong><br>31
+                    </div>
+                    <div class="bg-light p-3 border text-center" style="width: 80px; height: 80px; line-height: 1.2;">
+                        <strong>Q</strong><br>01
+                    </div>
+                    <div class="bg-light p-3 border text-center" style="width: 80px; height: 80px; line-height: 1.2;">
+                        <strong>S</strong><br>02
+                    </div>
+                    <div class="bg-light p-3 border text-center" style="width: 80px; height: 80px; line-height: 1.2;">
+                        <strong>S</strong><br>03
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="card mx-auto mt-4" style="max-width: 600px;">
+            <div class="card-body">
+                <div class="list-group">
+                    <!-- Sets por grupo muscular -->
+                    <a href="#" class="list-group-item list-group-item-action" onclick="toggleContent('sets')">
+                        <i class="bi bi-bar-chart"></i> Sets por grupo muscular
+                    </a>
+                    <div id="sets" class="collapse">
+                        <canvas id="setsChart"></canvas>
+                        <ul class="list-group mt-3">
+                            <li class="list-group-item">Peitoral: 15 sets</li>
+                            <li class="list-group-item">Pernas: 12 sets</li>
+                            <li class="list-group-item">Costas: 10 sets</li>
+                            <li class="list-group-item">Braços: 8 sets</li>
+                        </ul>
+                        <label for="periodo" class="form-label mt-3">Filtrar por período:</label>
+                        <select class="form-select" id="periodo">
+                            <option value="semana">Última semana</option>
+                            <option value="mes">Último mês</option>
+                            <option value="ano">Último ano</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Principais exercícios realizados -->
+                    <a href="#" class="list-group-item list-group-item-action" onclick="toggleContent('exercicios')">
+                        <i class="bi bi-list-task"></i> Principais exercícios realizados
+                    </a>
+                    <div id="exercicios" class="collapse">
+                        <table class="table mt-3">
+                            <thead>
+                                <tr>
+                                    <th>Exercício</th>
+                                    <th>Séries</th>
+                                    <th>Repetições</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Supino</td>
+                                    <td>4</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>Agachamento</td>
+                                    <td>3</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr>
+                                    <td>Levantamento Terra</td>
+                                    <td>4</td>
+                                    <td>8</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <label for="filtroExercicio" class="form-label">Filtrar por tipo:</label>
+                        <select class="form-select" id="filtroExercicio">
+                            <option value="todos">Todos</option>
+                            <option value="forca">Força</option>
+                            <option value="cardio">Cardio</option>
+                            <option value="alongamento">Alongamento</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Distribuição muscular -->
+                    <a href="#" class="list-group-item list-group-item-action" onclick="toggleContent('distribuicao')">
+                        <i class="bi bi-person"></i> Distribuição muscular
+                    </a>
+                    <div id="distribuicao" class="collapse">
+                        <canvas id="muscularChart" class="mt-3"></canvas>
+                        <div class="alert alert-info mt-3">
+                            <strong>Sugestão:</strong> Seu treino está focado demais no peitoral. Considere equilibrar com mais treinos de costas.
+                        </div>
+                    </div>
+                    
+                    <!-- Medidas -->
+                    <a href="#" class="list-group-item list-group-item-action" onclick="toggleContent('medidas')">
+                        <i class="bi bi-ruler"></i> Medidas
+                    </a>
+                    <div id="medidas" class="collapse">
+                        <canvas id="medidasChart" class="mt-3"></canvas>
+                        <ul class="list-group mt-3">
+                            <li class="list-group-item">Braço: 35 cm (meta: 37 cm)</li>
+                            <li class="list-group-item">Cintura: 80 cm (meta: 78 cm)</li>
+                            <li class="list-group-item">Pernas: 60 cm (meta: 62 cm)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript para mostrar/ocultar conteúdo -->
+    <script>
+        function toggleContent(id) {
+            var element = document.getElementById(id);
+            if (element.classList.contains('collapse')) {
+                element.classList.remove('collapse');
+            } else {
+                element.classList.add('collapse');
+            }
+        }
+
+        // Gráfico de Sets por grupo muscular
+        var ctx = document.getElementById('setsChart').getContext('2d');
+        var setsChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Peitoral', 'Pernas', 'Costas', 'Braços'],
+                datasets: [{
+                    label: 'Sets',
+                    data: [15, 12, 10, 8],
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0']
+                }]
+            }
+        });
+
+        // Gráfico de Distribuição muscular
+        var ctx2 = document.getElementById('muscularChart').getContext('2d');
+        var muscularChart = new Chart(ctx2, {
+            type: 'pie',
+            data: {
+                labels: ['Peitoral', 'Pernas', 'Costas', 'Braços'],
+                datasets: [{
+                    label: 'Distribuição',
+                    data: [40, 25, 20, 15],
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0']
+                }]
+            }
+        });
+
+        // Gráfico de Medidas
+        var ctx3 = document.getElementById('medidasChart').getContext('2d');
+        var medidasChart = new Chart(ctx3, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai'],
+                datasets: [{
+                    label: 'Braço (cm)',
+                    data: [34, 34.5, 35, 35.5, 36],
+                    borderColor: '#FF6384',
+                    fill: false
+                }, {
+                    label: 'Cintura (cm)',
+                    data: [82, 81.5, 80, 79.5, 79],
+                    borderColor: '#36A2EB',
+                    fill: false
+                }]
+            }
+        });
+    </script>
 {% endblock %}

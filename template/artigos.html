@@ -1,49 +1,76 @@
 {% extends "base.html" %}
-
 {% block subtitulo %}Artigos{% endblock %}
-
 {% block conteudo %}
-  <div class="container my-5">
-    <!-- Filtro de categorias e busca -->
-    <div class="row mb-4">
-      <div class="col-12">
-        <ul class="nav nav-pills">
-          <li class="nav-item"><a class="nav-link" href="#">Emagrecimento</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Ganho de massa</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Sem lactose</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Sem glúten</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Balenceada</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Pré-treino</a></li>
-          <!-- ... outras categorias ... -->
-        </ul>
-        <form class="d-flex float-end">
-          <input class="form-control me-2" type="search" placeholder="Pesquisar Artigos" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Buscar</button>
-        </form>
-      </div>
-    </div>
+<style>
+    .article-card {
+        background: #ffffff;
+        border: 1px solid #cccccc;
+        margin-bottom: 20px;
+        padding: 15px;
+        border-radius: 5px;
+    }
+    .article-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    .article-image {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        margin-right: 15px;
+        border-radius: 50%;
+    }
+    .article-title {
+        font-size: 20px;
+        color: #333333;
+    }
+    .article-text {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #666666;
+    }
+    .tag {
+        display: inline-block;
+        background: #e1e1e1;
+        color: #333;
+        padding: 5px 10px;
+        border-radius: 15px;
+        margin-right: 10px;
+        font-size: 14px;
+    }
+</style>
 
-    <!-- Lista de Artigos -->
-    {% for artigo in artigos %}
-      <div class="card mb-4">
-        <div class="card-body">
-          <div class="d-flex align-items-center mb-3">
-            <img src="/static/img/artigo1.png" class="rounded-circle me-2" alt="Autor" width="50" height="50">
-            <div>
-              <h5 class="card-title mb-0">{{ artigo.titulo }}</h5>
-              <p class="card-subtitle text-muted">{{ artigo.autor }} • Nutricionista</p>
+<div class="container py-4">
+    <div class="row">
+        <!-- Artigo 1 -->
+        <div class="col-md-12 article-card">
+            <div class="article-header">
+                <img src="/static/img/bruno.png" alt="Jorlan - Profissional de Educação Física" class="article-image">
+                <div>
+                    <div class="tag">Treino de Bíceps</div>
+                    <div class="tag">Musculação</div>
+                    <h2 class="article-title">Treino de Bíceps: Fortaleça e Defina Seus Braços</h2>
+                </div>
             </div>
-          </div>
-          <p class="card-text">{{ artigo.descricao }}</p>
-          <h6>Receitas:</h6>
-          <ul>
-            {% for receita in artigo.receitas %}
-              <li>{{ receita }}</li>
-            {% endfor %}
-          </ul>
-          <a href="#" class="btn btn-primary">Cadastrar Artigo</a>
+            <p class="article-text">
+                Quer aumentar a força e definir os bíceps? Nosso treino especialmente desenvolvido para os bíceps é a solução perfeita!...
+            </p>
         </div>
-      </div>
-    {% endfor %}
-  </div>
+        <!-- Artigo 2 -->
+        <div class="col-md-12 article-card">
+            <div class="article-header">
+                <img src="/static/img/suelen.png" alt="Anna - Nutricionista" class="article-image">
+                <div>
+                    <div class="tag">Nutrição</div>
+                    <div class="tag">Dieta</div>
+                    <h2 class="article-title">Dieta Saudável para Ganho de Massa Muscular</h2>
+                </div>
+            </div>
+            <p class="article-text">
+                Quer ganhar massa muscular de forma saudável? Nosso dieta especialmente desenvolvida para o ganho de massa é a solução perfeita!...
+            </p>
+        </div>
+    </div>
+</div>
 {% endblock %}
