@@ -90,7 +90,6 @@ def get_root(request: Request):
     return templates.TemplateResponse("painelcliente.html", common_view_params(request))
 
 @app.get("/perfil")
-@app.get("/perfil")
 def get_root(request: Request):
     view_model = {
         "request": request
@@ -340,6 +339,13 @@ def get_root(request: Request):
         "request": request
     }
     return templates.TemplateResponse("treinamento_vazio.html", common_view_params(request))
+
+@app.get("/perguntasfrequentes")
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("perguntasfrequentes.html", common_view_params(request))
 
 if __name__ == "__main__":
     uvicorn.run(app="main:app", port=8000, reload=True)
