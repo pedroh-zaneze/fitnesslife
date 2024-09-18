@@ -90,6 +90,7 @@ def get_root(request: Request):
     return templates.TemplateResponse("painelcliente.html", common_view_params(request))
 
 @app.get("/perfil")
+@app.get("/perfil")
 def get_root(request: Request):
     view_model = {
         "request": request
