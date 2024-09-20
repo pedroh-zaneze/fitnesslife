@@ -1,7 +1,8 @@
 version: '3.8'
 services:
   web:
-    container_name: fitnesslife
+    container_name: fitnesslife.cachoeiro.es
     build: .
     ports:
-      - "8200:8000"
+      - "8210:8000"
+  
