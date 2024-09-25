@@ -1,0 +1,78 @@
+{% extends "base_personal.html" %}
+{% block subtitulo %}Histórico dos Alunos{% endblock %}
+{% block conteudo %}
+<div class="container mt-5">
+    <div class="card mx-auto" style="max-width: 800px;">
+        <div class="card-header text-center">
+            <h2>Histórico dos Alunos</h2>
+        </div>
+        <div class="card-body">
+            <!-- Busca de alunos -->
+            <div class="input-group mb-4">
+                <input type="text" class="form-control" placeholder="Encontrar alunos" aria-label="Encontrar alunos">
+                <span class="input-group-text">
+                    <i class="bi bi-search"></i>
+                </span>
+            </div>
+
+            <!-- Lista de alunos -->
+            <div class="d-flex overflow-auto mb-4">
+                <!-- Repetir essa estrutura para cada aluno -->
+                <div class="text-center me-3">
+                    <img src="/static/img/aluno1.png" alt="Foto aluno" class="rounded-circle" width="50">
+                    <p>Lorena Pedrosa</p>
+                </div>
+                <!-- Botão para adicionar novo aluno -->
+                <div class="text-center">
+                    <a href="/adicionar_aluno">
+                        <i class="bi bi-plus-circle" style="font-size: 2rem;"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Histórico de Treinamento -->
+            <div class="mb-4">
+                <h4>Treinamentos</h4>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <h5>Lorena Pedrosa</h5>
+                                <p>Segunda-Feira, Junho 3, 2024</p>
+                            </div>
+                            <div class="text-end">
+                                <p>Tempo: <strong>1h 12min</strong></p>
+                                <p>Pull Volume: <strong>5,379 kg</strong></p>
+                                <p>Registros: <strong>2</strong></p>
+                            </div>
+                        </div>
+                        <hr>
+                        <!-- Lista de exercícios -->
+                        <div class="d-flex flex-column">
+                            <div class="d-flex mb-2">
+                                <img src="/static/img/puxada_alta.png" alt="Puxada Alta" class="me-2" width="50">
+                                <div>
+                                    <p>2 Sets Puxada Alta (Máquina)</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <img src="/static/img/remada_curvada.png" alt="Remada Curvada" class="me-2" width="50">
+                                <div>
+                                    <p>2 Sets Remada Curvada (Smith)</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <img src="/static/img/pulldown.png" alt="Pulldown" class="me-2" width="50">
+                                <div>
+                                    <p>2 Sets Pulldown</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

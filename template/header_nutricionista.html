@@ -1,0 +1,53 @@
+<header>
+    <nav class="navbar text-black bg-custom py-3 px-1">
+        <div class="container-fluid d-flex flex-column align-items-center">
+            <div class="d-flex align-items-center">
+                    <a href="/" class="d-flex">
+                        <img src="/static/img/logosvg.svg" alt="logotipo" height="60px">
+                        <img src="/static/img/nome_fitness.svg" alt="logotipo" width="300px">
+                    </a>
+            </div>
+        </div>
+        <div class="col-12 mt-3">
+            <div class="row justify-content-center justify-content-lg-between align-items-center">
+                <!-- Navbar Responsiva -->
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid px-5"> <!-- Adicionado px-5 para espaçar da borda -->
+                        <!-- Botão Hamburger (Exibido apenas em telas pequenas) -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+        
+                        <!-- Links da Navbar (Colapsáveis) -->
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link text-white py-0 ps-0" href="/artigos_nutricionista">Artigos</a>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white py-0" href="/planos_nutricionista">Planos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white py-0" href="/contato_nutricionista">Contato</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white py-0" href="/sobre_nutricionista">Sobre</a>
+                                </li>
+                            </ul>
+        
+                            <!-- Formulário de Busca (Responsivo) -->
+                            <form action="/cadastrarnews" method="post" class="d-flex">
+                                <div class="input-group input-group-sm">
+                                    <input type="email" class="form-control bg-beige border-beige rounded-start-5" style="width: 200px" placeholder="Digite o termo da busca aqui" id="busca" />
+                                    <button class="btn btn-beige rounded-end-5" type="submit">
+                                        <i class="bi bi-search"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>        
+    </nav>
+</header>
+

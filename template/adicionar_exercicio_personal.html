@@ -1,0 +1,53 @@
+{% extends "base_personal.html" %}
+{% block subtitulo %}Adicionar Exercício Personal{% endblock %}
+{% block conteudo %}
+<div class="container mt-5">
+    <div class="card mx-auto" style="max-width: 600px;">
+        <div class="card-header text-center">
+            <h2>Adicionar Exercício</h2>
+        </div>
+        <div class="card-body">
+            <!-- Formulário para cadastrar exercício -->
+            <form method="post" action="/salvar_exercicio">
+                <div class="form-group mb-3">
+                    <label for="nomeExercicio">Nome do Exercício</label>
+                    <input type="text" class="form-control" id="nomeExercicio" name="nome" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="seriesExercicio">Quantidade de Séries</label>
+                    <input type="number" class="form-control" id="seriesExercicio" name="series" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="repeticoesExercicio">Repetições</label>
+                    <input type="number" class="form-control" id="repeticoesExercicio" name="repeticoes" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+                <a href="/cancelar" class="btn btn-danger">Cancelar</a>
+            </form>
+
+            <!-- Recomendação de exercício -->
+            <div class="mt-4">
+                <h5>Recomendar Exercício:</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="recomendacao" id="paraTodos" value="todos">
+                    <label class="form-check-label" for="paraTodos">Para todos</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="recomendacao" id="personalizada" value="personalizada">
+                    <label class="form-check-label" for="personalizada">Personalizada</label>
+                </div>
+            </div>
+
+            <!-- Lista de alunos cadastrados -->
+            <div class="mt-4">
+                <h5>Alunos Cadastrados na Ficha:</h5>
+                <ul class="list-group">
+                    <li class="list-group-item">Lorena#4778</li>
+                    <li class="list-group-item">Kauã#1000</li>
+                </ul>
+                <a href="/adicionar_aluno" class="btn btn-link mt-2">Adicionar Aluno +</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends "base_personal.html" %}
+{% block subtitulo %}Adicionar Ficha de Exercícios{% endblock %}
+{% block conteudo %}
+<div class="container mt-5">
+    <div class="card mx-auto" style="max-width: 600px;">
+        <div class="card-header text-center">
+            <h2>Adicionar Ficha</h2>
+        </div>
+        <div class="card-body">
+            <!-- Formulário para cadastrar exercício -->
+            <form method="post" action="/salvar_ficha">
+                <h4>Cadastrar Exercício</h4>
+                <div class="form-group mb-3">
+                    <label for="nomeExercicio">Nome do Exercício</label>
+                    <input type="text" class="form-control" id="nomeExercicio" name="nome_exercicio" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="seriesExercicio">Quantidade de Séries</label>
+                    <input type="number" class="form-control" id="seriesExercicio" name="series_exercicio" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="repeticoesExercicio">Repetições</label>
+                    <input type="number" class="form-control" id="repeticoesExercicio" name="repeticoes_exercicio" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+                <a href="/cancelar" class="btn btn-danger">Cancelar</a>
+            </form>
+
+            <hr>
+
+            <!-- Formulário para cadastrar ficha -->
+            <form method="post" action="/salvar_ficha">
+                <h4>Cadastrar Ficha nova</h4>
+                <div class="form-group mb-3">
+                    <label for="nomeFicha">Nome Ficha</label>
+                    <input type="text" class="form-control" id="nomeFicha" name="nome_ficha" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="exercicioFicha">Exercício</label>
+                    <input type="text" class="form-control" id="exercicioFicha" name="exercicio_ficha" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+                <a href="/cancelar" class="btn btn-danger">Cancelar</a>
+                <a href="/adicionar_exercicio" class="btn btn-link">Adicionar exercício +</a>
+            </form>
+
+            <hr>
+
+            <!-- Recomendação da ficha -->
+            <div class="mt-4">
+                <h5>Recomendar Ficha de Exercício:</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="recomendacao_ficha" id="paraTodos" value="todos">
+                    <label class="form-check-label" for="paraTodos">Para todos</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="recomendacao_ficha" id="personalizada" value="personalizada">
+                    <label class="form-check-label" for="personalizada">Personalizada</label>
+                </div>
+            </div>
+
+            <!-- Alunos cadastrados -->
+            <div class="mt-4">
+                <h5>Alunos Cadastrados na Ficha:</h5>
+                <ul class="list-group">
+                    <li class="list-group-item">Lorena#4778</li>
+                    <li class="list-group-item">Kauã#1000</li>
+                </ul>
+                <a href="/adicionar_aluno" class="btn btn-link mt-2">Adicionar Aluno +</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -347,19 +347,152 @@ def get_root(request: Request):
     }
     return templates.TemplateResponse("perguntasfrequentes.html", common_view_params(request))
 
+@app.get("/personal_inicial")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("pagina_inicial_personal.html", common_view_params(request))
+
+@app.get("/configuracoes_personal")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("configuracoes_personal.html", common_view_params(request))
+
+@app.get("/sobre_personal")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("sobre_personal.html", common_view_params(request))
+
+@app.get("/termos_personal")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("termos_personal.html", common_view_params(request))
+
+@app.get("/contato_personal")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("contato_personal.html", common_view_params(request))
+
+@app.get("/suporte_personal")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("suporte_personal.html", common_view_params(request))
+
+@app.get("/politicadeprivacidade_personal")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("politicadeprivacidade_personal.html", common_view_params(request))
+
+@app.get("/planos_personal")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("plano_personal.html", common_view_params(request))
+
+@app.get("/artigos_personal")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("artigos_personal.html", common_view_params(request))
+
+@app.get("/adicionar_exercicio_personal")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("adicionar_exercicio_personal.html", common_view_params(request))
+
+@app.get("/adicionar_ficha_personal")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("adicionar_ficha_personal.html", common_view_params(request))
+
+@app.get("/historico_alunos_personal")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("historico_alunos_personal.html", common_view_params(request))
+
+@app.get("/nutricionista_inical")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("pagina_inicial_nutricionista.html", common_view_params(request))
+
+@app.get("/configuracoes_nutricionista")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("configuracoes_nutricionista.html", common_view_params(request))
+
+@app.get("/sobre_nutricionista")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("sobre_nutricionista.html", common_view_params(request))
+
+@app.get("/termos_nutricionista")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("termos_nutricionista.html", common_view_params(request))
+
+@app.get("/contato_nutricionista")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("contato_nutri.html", common_view_params(request))
+
+@app.get("/suporte_nutricionista")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("suporte_nutricionista.html", common_view_params(request))
+
+@app.get("/politicadeprivacidade_nutricionista")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("politicadeprivacidade_nutricionista.html", common_view_params(request))
+
+@app.get("/planos_nutricionista")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("plano_nutricionista.html", common_view_params(request))
+
+@app.get("/artigos_nutricionista")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("artigos_nutricionista.html", common_view_params(request))
+
 if __name__ == "__main__":
     uvicorn.run(app="main:app", port=8000, reload=True)
-
-
-
-
-
-
-
-
-
-
-
-
-
-

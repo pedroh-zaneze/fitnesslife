@@ -1,0 +1,51 @@
+{% extends "base_nutricionista.html" %}
+{% block subtitulo %}Planos{% endblock %}
+{% block conteudo %}
+<div class="container my-5">
+    <h1 class="text-center">Planos</h1>
+    <p class="text-center lead">Escolha entre nossos dois planos para começar a sua jornada fitness hoje mesmo!</p>
+    
+    <div class="row mt-4">
+        <div class="col-md-6 mb-4">
+            <div class="card plan-card">
+                <div class="card-header text-center">
+                    <h2>Plano Gratuito</h2>
+                    <p class="display-4">R$0,00</p>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-check-circle text-success"></i> Anúncios</li>
+                        <li><i class="bi bi-check-circle text-success"></i> Exercícios e dietas genéricas</li>
+                        <li><i class="bi bi-check-circle text-success"></i> Diário de treino e dieta</li>
+                        <li><i class="bi bi-x-circle text-danger"></i> Acompanhamento com nutricionista e educador físico</li>
+                        <li><i class="bi bi-x-circle text-danger"></i> Relatórios detalhados sobre sua evolução</li>
+                    </ul>
+                    <div class="text-center mt-4">
+                        <a href="/signup" class="btn btn-outline-primary btn-lg">Adquirir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card plan-card">
+                <div class="card-header text-center ">
+                    <h2>Plano Plus</h2>
+                    <p class="display-4">R$39,90/mês</p>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-x-circle text-danger"></i> Anúncios</li>
+                        <li><i class="bi bi-check-circle text-success"></i> Exercícios e dietas personalizados</li>
+                        <li><i class="bi bi-check-circle text-success"></i> Diário de treino e dieta</li>
+                        <li><i class="bi bi-check-circle text-success"></i> Acompanhamento com nutricionista e educador físico</li>
+                        <li><i class="bi bi-check-circle text-success"></i> Relatórios detalhados sobre sua evolução</li>
+                    </ul>
+                    <div class="text-center mt-4">
+                        <a href="/signup" class="btn btn-outline-primary btn-lg">Adquirir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

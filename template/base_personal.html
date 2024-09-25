@@ -110,7 +110,7 @@
 </head>
 <body class="d-flex flex-column min-vh-100 bg-green">
     {% if show_header %}
-    {% include "header.html" %}
+    {% include "header_personal.html" %}
     {% endif %}
     <main class="d-flex flex-column flex-grow-1">
         <div class="d-flex flex-grow-1">
@@ -118,23 +118,22 @@
             <aside class="coluna-esquerda p-3 d-flex flex-column justify-content-between">
                 <div>
                     <div class="px-5 mb-2 border-bottom border-bottom-1 border-secondary-subtle">
-                        <img src="/static/img/fotoperfil.png" alt="Foto de Perfil" class="img-thumbnail rounded-circle">
-                        <p class="lead text-center">Dino</p>
+                        <img src="/static/img/Bruno.png" alt="Foto de Perfil" class="img-thumbnail rounded-circle">
+                        <p class="lead text-center">Brunão</p>
                     </div>
                     <nav class="nav nav-pills flex-column mt-2">
-                        <a class="nav-link text-dark-beige" href="/painelcliente">Painel</a>
-                        <a class="nav-link text-dark-beige" href="/perfil">Meu Perfil</a>
-                        <a class="nav-link text-dark-beige" href="/exercicios">Registro de Exercícios</a>
-                        <a class="nav-link text-dark-beige" href="/alimentacao">Registro de Alimentação</a>
-                        <a class="nav-link text-dark-beige" href="/mensagens">Mensagens</a>
-                        <a class="nav-link text-dark-beige" href="/configuracoes">Configurações</a>
+                        <a class="nav-link text-dark-beige" href="/personal_inicial">Meu Perfil</a>
+                        <a class="nav-link text-dark-beige" href="/">Mensagens</a>
+                        <a class="nav-link text-dark-beige" href="/">Meus Alunos</a>
+                        <a class="nav-link text-dark-beige" href="/">Artigos</a>
+                        <a class="nav-link text-dark-beige" href="/configuracoes_personal">Configurações</a>
                         <a class="nav-link text-dark-beige" href="/sair">Sair</a>
                     </nav>
                 </div>
                 <nav class="nav nav-pills flex-column mt-3">
-                    <a class="nav-link text-dark-beige" href="/politicadeprivacidade">Política de Privacidade</a>
-                    <a class="nav-link text-dark-beige" href="/termos">Termos de Uso</a>
-                    <a class="nav-link text-dark-beige" href="/suporte">Suporte</a>
+                    <a class="nav-link text-dark-beige" href="/politicadeprivacidade_personal">Política de Privacidade</a>
+                    <a class="nav-link text-dark-beige" href="/termos_personal">Termos de Uso</a>
+                    <a class="nav-link text-dark-beige" href="/suporte_personal">Suporte</a>
                 </nav>
             </aside>
             {% endif %}

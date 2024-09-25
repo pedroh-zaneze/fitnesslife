@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base_nutricionista.html" %}
 {% block subtitulo %}Configurações{% endblock %}
 {% block conteudo %}
     <div class="container mt-5">
@@ -7,7 +7,7 @@
         <div class="card-body">
             <h4 class="card-title text-center">Perfil</h4>
             <div class="text-center mb-3">
-                <img src="/static/img/fotoperfil.png" alt="Foto de perfil" class="rounded-circle" width="100"><br>
+                <img src="/static/img/suelen.png" alt="Foto de perfil" class="rounded-circle" width="100"><br>
                 <button class="btn btn-secondary mt-2">Carregar/alterar foto de perfil</button>
             </div>
             
@@ -15,11 +15,11 @@
                 <div class="mb-3">
                     <h5>Informações Pessoais</h5>
                     <label for="nome" class="form-label">Nome:</label>
-                    <input type="text" class="form-control" id="nome" name="nome" value="Lorennna tal de tal">
+                    <input type="text" class="form-control" id="nome" name="nome" value="Suelen">
                 </div>
                 <div class="mb-3">
                     <label for="data-nascimento" class="form-label">Data de nascimento:</label>
-                    <input type="date" class="form-control" id="data-nascimento" name="data-nascimento" value="2005-05-04">
+                    <input type="date" class="form-control" id="data-nascimento" name="data-nascimento" value="2000-05-28">
                 </div>
                 <div class="mb-3">
                     <label for="descricao-pessoal" class="form-label">Descrição Pessoal:</label>
@@ -35,7 +35,7 @@
                 <div class="mb-3">
                     <h5>Conta</h5>
                     <label for="email" class="form-label">Endereço de e-mail:</label>
-                    <input type="email" class="form-control" id="email" name="email" value="lore*******@gmail.com">
+                    <input type="email" class="form-control" id="email" name="email" value="bruno*******@gmail.com">
                 </div>
                 <div class="mb-3">
                     <label for="senha" class="form-label">Senha:</label>
@@ -62,7 +62,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <label for="tipo-plano" class="form-label">Tipo de plano:</label>
-                            <input type="text" class="form-control" id="tipo-plano" name="tipo-plano" value="Gratuito" readonly>
+                            <input type="text" class="form-control" id="tipo-plano" name="tipo-plano" value="Plus" readonly>
                         </div>
                         <div class="col-md-6">
                             <label for="data-expiracao" class="form-label">Data de expiração da assinatura:</label>
@@ -129,6 +129,7 @@
 
             <h5>Perguntas Frequentes</h5>
             <a href="/perguntasfrequentes" class="btn btn-link">Clique aqui para acessar a aba de perguntas frequentes</a>
+
         </div>
     </div>
 </div>
