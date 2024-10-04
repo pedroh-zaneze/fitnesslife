@@ -1,0 +1,48 @@
+{% extends "base_nutricionista.html" %}
+{% block subtitulo %}Dietas Postadas{% endblock %}
+{% block conteudo %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Dietas Postadas</h2>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Tipo</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dieta Low Carb</td>
+                    <td>Dieta baixa em carboidratos</td>
+                    <td>05/01/24</td>
+                </tr>
+                <tr>
+                    <td>Dieta vegana</td>
+                    <td>Consumo de alimentos de origem vegetal</td>
+                    <td>18/02/24</td>
+                </tr>
+                <tr>
+                    <td>Dieta hipercalórica</td>
+                    <td>Para ganho de massa muscular</td>
+                    <td>03/03/24</td>
+                </tr>
+                <!-- Mais linhas seguem o mesmo padrão -->
+                <!-- Exemplo de repetição para mais dados -->
+                <tr>
+                    <td>Dieta Flexível</td>
+                    <td>Alimentação baseada no controle de calorias e de macronutrientes</td>
+                    <td>14/04/24</td>
+                </tr>
+                <tr>
+                    <td>Dieta proteica</td>
+                    <td>Focada no alto consumo de proteínas</td>
+                    <td>27/05/24</td>
+                </tr>
+                <!-- Continue listando outros exercícios -->
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

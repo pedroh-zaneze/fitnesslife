@@ -431,6 +431,34 @@ def get_root(request: Request):
     }
     return templates.TemplateResponse("historico_alunos_personal.html", common_view_params(request))
 
+@app.get("/exercicios_postados_personal")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("exercicios_postados_personal.html", common_view_params(request))
+
+@app.get("/artigos_postados_personal")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("artigos_postados_personal.html", common_view_params(request))
+
+@app.get("/fichas_postadas_personal")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("fichas_postadas_personal.html", common_view_params(request))
+
+@app.get("/meus_alunos_personal")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("meus_alunos_personal.html", common_view_params(request))
+
 @app.get("/nutricionista_inical")  
 def get_root(request: Request):
     view_model = {
@@ -493,6 +521,55 @@ def get_root(request: Request):
         "request": request
     }
     return templates.TemplateResponse("artigos_nutricionista.html", common_view_params(request))
+
+@app.get("/meus_alunos_nutricionista")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("meus_alunos_nutricionista.html", common_view_params(request))
+
+@app.get("/receitas_postadas_nutricionista")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("receitas_postadas_nutricionista.html", common_view_params(request))
+
+@app.get("/artigos_postados_nutricionista")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("artigos_postados_nutricionista.html", common_view_params(request))
+
+@app.get("/dietas_postadas_nutricionista")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("dietas_postadas_nutricionista.html", common_view_params(request))
+
+@app.get("/historico_alunos_nutricionista")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("historico_alunos_nutricionista.html", common_view_params(request))
+
+@app.get("/receitas_nutricionista")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("receitas_nutricionista.html", common_view_params(request))
+
+@app.get("/dietas_nutricionista")  
+def get_root(request: Request):
+    view_model = {
+        "request": request
+    }
+    return templates.TemplateResponse("dietas_nutricionista.html", common_view_params(request))
 
 if __name__ == "__main__":
     uvicorn.run(app="main:app", port=8000, reload=True)
